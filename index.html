@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171633">
+  <meta name="description" content="A little birthday universe made with love for Anna.">
+  <title>For Anna, with love ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="sparkle-field" aria-hidden="true" id="sparkleField"></div>
+
+  <main>
+    <!-- PIN GATE: edit the PIN and hint in script.js -->
+    <section class="gate screen" id="pinGate" aria-labelledby="gateTitle">
+      <div class="gate-card">
+        <div class="tiny-orbit" aria-hidden="true">✦</div>
+        <p class="eyebrow">A VERY SMALL SECRET UNIVERSE</p>
+        <div class="gate-bow" aria-hidden="true">୨୧</div>
+        <h1 id="gateTitle">A little something<br><em>for Anna</em></h1>
+        <p class="gate-copy">This tiny corner of the internet belongs to you.<br>Happy Birthday to my one and only♡</p>
+        <div class="hint-pill"><span>♡</span> Hint: <strong id="pinHint">the day everything between us started</strong></div>
+        <form id="pinForm" class="pin-form">
+          <label class="sr-only" for="pinInput">Enter your four-digit PIN</label>
+          <input id="pinInput" inputmode="numeric" autocomplete="off" maxlength="4" pattern="[0-9]{4}" placeholder="· · · ·" aria-describedby="pinError" required>
+          <button class="button button-primary" type="submit">Unlock the magic <span>↗</span></button>
+          <p class="error-message" id="pinError" role="status" aria-live="polite"></p>
+        </form>
+        <p class="gate-foot">made for only a certain someone</p>
+      </div>
+      <span class="floating-star star-a" aria-hidden="true">✧</span>
+      <span class="floating-star star-b" aria-hidden="true">✦</span>
+      <span class="floating-star star-c" aria-hidden="true">♡</span>
+    </section>
+
+    <div id="birthdaySite" class="site hidden">
+      <header class="topbar">
+        <a class="brand" href="#home" aria-label="Back to top"><span class="brand-mark">୨୧</span> anna's little universe</a>
+        <nav aria-label="Main navigation">
+          <a href="#memories">memories</a>
+          <a href="#letter">a letter</a>
+          <a href="#cake">the cake</a>
+        </nav>
+        <button id="musicToggle" class="music-toggle" type="button" aria-label="Play birthday song">
+          <span class="music-dot"></span><span id="musicLabel">play our song</span><span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+      </header>
+
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> NOVEMBER 03 · HER DAY <span class="eyebrow-line"></span></p>
+          <h1>the world got<br><em>luckier</em> when<br>you arrived.</h1>
+          <p class="hero-sub">Happy birthday, Anika. A scrapbook of tiny moments, big love, and all the things I hope you never forget.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#memories">Open your scrapbook <span>↓</span></a>
+            <button class="text-button" id="surpriseButton" type="button">psst… a secret <span>♡</span></button>
+          </div>
+          <div class="hero-note"><span class="note-star">✦</span><span>collected memories, <em>infinite love</em></span></div>
+        </div>
+        <div class="hero-art" aria-label="Decorative birthday scrapbook">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="moon">☾</div>
+          <div class="hero-polaroid polaroid-back">
+            <div class="placeholder-scene scene-lavender"><img src="assets/anna2.png" alt="A favourite memory">♡</div>
+            <p>my favourite people</p>
+          </div>
+          <div class="hero-polaroid polaroid-front">
+            <div class="placeholder-scene scene-night"><img src="assets/anna1.jpg" alt="A favourite memory"><small>YOU + ME</small></div>
+            <p>partners in everything</p>
+          </div>
+          <span class="art-sticker sticker-bow">୨୧</span>
+          <span class="art-sticker sticker-heart">♡</span>
+          <span class="art-sticker sticker-star">✧</span>
+          <span class="art-caption">a little piece<br>of forever</span>
+        </div>
+        <a href="#note" class="scroll-cue"><span></span> keep wandering</a>
+      </section>
+
+      <section class="birthday-strip" id="note">
+        <div class="strip-inner">
+          <span>✦</span><p>today is all about <em>you</em>, and how lucky I am to know you.</p><span>✦</span>
+        </div>
+      </section>
+
+      <section class="section-wrap memories-section" id="memories">
+        <div class="section-heading">
+          <p class="eyebrow">CHAPTER ONE · LITTLE TIME CAPSULE</p>
+          <h2>proof that life is<br><em>better with you.</em></h2>
+          <p class="section-intro">A few snapshots from our very important history of being iconic. Tap a photo to read its little note.</p>
+        </div>
+        <div class="photo-grid" id="photoGrid">
+          <button class="photo-card photo-tall" data-caption="The kind of memory that makes an ordinary day feel golden." data-title="the golden days" type="button">
+            <div class="photo-placeholder gradient-one"><span class="placeholder-icon">✿</span><small>ADD YOUR PHOTO</small></div><span class="tape"></span><span class="photo-label">the golden days ♡</span>
+          </button>
+          <button class="photo-card photo-tilt" data-caption="Proof that we can make literally anything funny." data-title="certified chaos" type="button">
+            <div class="photo-placeholder gradient-two"><span class="placeholder-icon">☻</span><small>ADD YOUR PHOTO</small></div><span class="tape tape-lilac"></span><span class="photo-label">certified chaos</span>
+          </button>
+          <button class="photo-card" data-caption="A tiny moment, a permanent place in my heart." data-title="one for the archives" type="button">
+            <div class="photo-placeholder gradient-three"><span class="placeholder-icon">✧</span><small>ADD YOUR PHOTO</small></div><span class="photo-label">one for the archives</span>
+          </button>
+          <button class="photo-card photo-tilt-left" data-caption="If I could bottle up a feeling, it would be this one." data-title="my favourite one" type="button">
+            <div class="photo-placeholder gradient-four"><span class="placeholder-icon">♡</span><small>ADD YOUR PHOTO</small></div><span class="tape"></span><span class="photo-label">my favourite one</span>
+          </button>
+          <button class="photo-card photo-wide" data-caption="Here's to every memory we've made and every one still waiting for us." data-title="to be continued…" type="button">
+            <div class="photo-placeholder gradient-five"><span class="placeholder-icon">☾</span><small>ADD YOUR PHOTO</small></div><span class="photo-label">to be continued… ✦</span>
+          </button>
+        </div>
+        <p class="micro-note">♡ Go on, keep scrolling down girl.</p>
+      </section>
+
+      <section class="video-section">
+        <div class="section-wrap video-layout">
+          <div>
+            <p class="eyebrow">CHAPTER TWO · MOVING MEMORIES</p>
+            <h2>little moments,<br><em>in motion.</em></h2>
+            <p class="section-intro">Two of the .</p>
+            <div class="video-doodle">✧ <span>press play, relive everything</span> ♡</div>
+          </div>
+          <div class="video-stack">
+            <div class="video-frame video-frame-one">
+              <video id="videoOne" controls playsinline preload="metadata" poster="assets/video-poster-1.svg">
+                <source src="assets/memory-video-1.mp4" type="video/mp4">
+                Your browser does not support this video.
+              </video>
+              <p><span>01</span> clocking it in!!</p>
+            </div>
+            <div class="video-frame video-frame-two">
+              <video id="videoTwo" controls playsinline preload="metadata" poster="assets/video-poster-2.svg">
+                <source src="assets/memory-video-2.mp4" type="video/mp4">
+                Your browser does not support this video.
+              </video>
+              <p><span>02</span> professional vloggerss (ps: also the first time I was in your house)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap secret-section">
+        <div class="secret-card">
+          <div class="secret-sparkle" aria-hidden="true">✧</div>
+          <p class="eyebrow">A TINY SIDE QUEST</p>
+          <h2>tap a star,<br><em>find a secret.</em></h2>
+          <p>There are little reminders scattered around this page. Here's one to start with…</p>
+          <button id="secretButton" class="secret-orb" type="button" aria-label="Reveal a hidden message"><span>✦</span></button>
+          <p id="secretMessage" class="secret-message" aria-live="polite">the universe is keeping one little note for you.</p>
+        </div>
+      </section>
+
+      <section class="letter-section" id="letter">
+        <div class="letter-stars" aria-hidden="true">✦　✧　♡　✧</div>
+        <div class="section-wrap letter-layout">
+          <div class="letter-side">
+            <p class="eyebrow">CHAPTER THREE · FROM ME TO YOU</p>
+            <h2>some things<br>deserve to be<br><em>said properly.</em></h2>
+            <p class="section-intro">No website could fit all the reasons you're special to me. But this is a start.</p>
+            <div class="letter-stamp">WITH<br>LOVE <span>♡</span></div>
+          </div>
+          <article class="letter-paper">
+            <div class="paper-top"><span>✧ a letter for anna ✧</span><span>03 · 11 · 26</span></div>
+            <div class="paper-bow">୨୧</div>
+            <h3>Dear Anna,</h3>
+            <div id="birthdayLetter" class="letter-body">
+              <p>A very happy birthday to my favourite human in the entirety of the cosmos♡</p>
+              <p>I wish for this next season of your life brings you immense love, freedom, adventure, hope and trust. If only I could, I would've taken all your pain and returned it as love. Even the combined lexicon of all the languages you and I know, it still would not be enough to tell you how much I love you.</p>
+              <p>Thank you for being a part of my life. For the inside jokes, the conversations, the chaos, and all the little moments that somehow become the big ones. I hope you always remember how much you matter to me, not just today, but on every random Tuesday too.</p>
+              <p>I hope we make more memories, more ridiculous stories, and a thousand more reasons to say, “remember when…?”</p>
+              <p class="letter-signoff">Always being the loudest cheer for you,<br><em>Sakshu ♡</em></p>
+            </div>
+            <div class="paper-footer">you are loved more than this page can say ✦</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-wrap cake-section" id="cake">
+        <div class="cake-copy">
+          <p class="eyebrow">THE GRAND FINALE</p>
+          <h2>make a wish,<br><em>birthday girl.</em></h2>
+          <p class="section-intro">Tap the candles to blow them out. Make the biggest, most unreasonable wish you can think of.</p>
+          <button id="wishButton" class="button button-primary" type="button">I've made my wish ✨</button>
+          <p class="wish-result" id="wishResult" aria-live="polite"></p>
+        </div>
+        <div class="cake-scene">
+          <div class="cake-spark spark-1">✦</div><div class="cake-spark spark-2">✧</div><div class="cake-spark spark-3">♡</div>
+          <div class="candles" id="candles">
+            <button class="candle" type="button" aria-label="Blow out candle 1"><span class="flame"></span><span class="wick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 2"><span class="flame"></span><span class="wick"></span></button>
+            <button class="candle" type="button" aria-label="Blow out candle 3"><span class="flame"></span><span class="wick"></span></button>
+          </div>
+          <div class="cake-top"><span>♡</span><i>✧</i><span>♡</span></div>
+          <div class="cake-layer layer-top"></div><div class="icing-drip"></div>
+          <div class="cake-layer layer-bottom"><span>HAPPY</span><span>BIRTHDAY</span></div>
+          <div class="cake-plate"></div>
+          <p class="cake-caption">sprinkled with a little extra magic</p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-bow">୨୧</div>
+        <p class="eyebrow">END OF THE PAGE, NEVER THE STORY</p>
+        <h2>love you to the moon<br><em>and back, Anna.</em></h2>
+        <p>made just for you ·  from the guy who can never shut up when the topic is about praising you</p>
+        <a href="#home" class="back-top">back to the top ↑</a>
+      </footer>
+    </div>
+  </main>
+
+  <audio id="birthdaySong" preload="none">
+    <source src="assets/our-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="modal hidden" id="photoModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close memory">×</button>
+      <span class="modal-star">✧</span>
+      <p class="eyebrow">A LITTLE MEMORY</p>
+      <h2 id="modalTitle">one for the archives</h2>
+      <p id="modalCaption">A tiny moment, a permanent place in my heart.</p>
+      <button class="button button-secondary" id="modalOkay" type="button">keeping this forever ♡</button>
+    </div>
+  </div>
+  <div class="toast hidden" id="toast" role="status" aria-live="polite"></div>
+  <script src="C:\Users\Lenovo\OneDrive\Documents\324\script.js"></script>
+</body>
+</html>
