@@ -19,7 +19,7 @@ const PHOTO_MEMORIES = [ {
   {
     src: "assets/dropdead-gorgeous.jpg",
     title: "my favourite one",
-    caption: "If I had to choose one picture out of all of them to be etched onto the back of my mind, This is what the word 'Beauty' truly means."
+    caption: "If I had to choose one picture out of all of them to be etched onto the back of my mind, I'd always choose this one. This is what the word 'Beauty' truly means."
   },
   {
     src: "assets/bday.png",
